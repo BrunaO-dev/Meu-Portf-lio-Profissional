@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 2s ease-in-out forwards',
+                        'slide-up': 'slideUp 1.5s ease-in-out forwards',
+                        'bounce-hover': 'bounceHover 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        bounceHover: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <header class="bg-gray-800 p-4 shadow-lg fixed w-full top-0">
+        <nav class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Meu Portfólio</h1>
+            <div id="menu-toggle" class="md:hidden cursor-pointer">
+                <span class="text-2xl">&#9776;</span>
+            </div>
+            <ul id="menu" class="hidden md:flex space-x-6">
+                <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
+                <li><a href="#projetos" class="hover:text-blue-400 transition">Projetos</a></li>
+                <li><a href="#contato" class="hover:text-blue-400 transition">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Menu Mobile -->
+        <ul id="mobile-menu" class="hidden flex flex-col bg-gray-800 p-4 space-y-4 mt-4 md:hidden">
+            <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
+            <li><a href="#projetos" class="hover:text-blue-400 transition">Projetos</a></li>
+            <li><a href="#contato" class="hover:text-blue-400 transition">Contato</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-l from-blue-600 to-black opacity-0 animate-fade-in">
+        <h2 class="text-4xl font-bold">Bruna Monique <br> &lt;/Dev Front-End &gt; </h2>
+        <p class="text-lg mt-4"> Transformando 
+            ideias em interfaces incríveis:
+             código limpo,
+            design responsivo e
+             experiências envolventes</p>
+        <a href="#projetos" class="mt-6 px-6 py-3 bg-white text-black rounded-lg shadow-lg hover:bg-gray-200 transition-all">Ver Projetos</a>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="max-w-4xl mx-auto p-10 text-center opacity-0 animate-slide-up">
+        <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
+        <p class="text-gray-300">Sou um desenvolvedor apaixonado por criar interfaces modernas e responsivas. Gosto de desafios e estou sempre aprendendo novas tecnologias.</p>
+    </section>
+<!--Tecnologias e frameworks-->>
+    <section id="tecnologias" class="max-w-4xl mx-auto p-10 text-center hidden-on-load">
+        <h2 class="text-3xl font-bold mb-6">Tecnologias & Frameworks</h2>
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-110">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mx-auto" alt="HTML5">
+                <p class="mt-2">HTML5</p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-110">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12 mx-auto" alt="CSS3">
+                <p class="mt-2">CSS3</p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-110">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mx-auto" alt="JavaScript">
+                <p class="mt-2">JavaScript</p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-110">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12 mx-auto" alt="React">
+                <p class="mt-2">React</p>
+            </div>
+            <div class="p-4 bg-gray-800 rounded-lg shadow-lg transform transition hover:scale-110">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" class="w-12 h-12 mx-auto" alt="TailwindCSS">
+                <p class="mt-2">TailwindCSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="bg-gray-800 p-10">
+        <h2 class="text-3xl font-bold text-center mb-6">Meus Projetos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:animate-bounce-hover">
+                <h3 class="text-xl font-bold">Projeto 1</h3>
+                <p class="text-gray-300 mt-2">Descrição breve do projeto.</p>
+                <a href="#" class="text-blue-400 hover:underline mt-4 inline-block">Ver Projeto</a>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:animate-bounce-hover">
+                <h3 class="text-xl font-bold">Projeto 2</h3>
+                <p class="text-gray-300 mt-2">Descrição breve do projeto.</p>
+                <a href="#" class="text-blue-400 hover:underline mt-4 inline-block">Ver Projeto</a>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:animate-bounce-hover">
+                <h3 class="text-xl font-bold">Projeto 3</h3>
+                <p class="text-gray-300 mt-2">Descrição breve do projeto.</p>
+                <a href="#" class="text-blue-400 hover:underline mt-4 inline-block">Ver Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="max-w-4xl mx-auto p-10 text-center opacity-0 animate-slide-up">
+        <h2 class="text-3xl font-bold mb-4">Contato</h2>
+        <p class="text-gray-300">Entre em contato comigo através do e-mail: <strong>seuemail@email.com</strong></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 p-4 text-center">
+        <p>&copy; 2025 Meu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para Menu Mobile -->
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
